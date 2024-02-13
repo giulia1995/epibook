@@ -2,8 +2,9 @@
 
 function Myfooter (){
     return (
-        <div className='bg-dark fixed-bottom m-0 w-100'>
-            <h4 className='text-white text-center p-4'>Epibook</h4>
+        <div className='bg-dark m-0 w-100'>
+            <h4 className='text-white text-center p-4 m-0'>Epibook-{new Date().getFullYear()}</h4>
+
 
         </div>
     )
