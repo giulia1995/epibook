@@ -1,8 +1,13 @@
-import React from 'react';
-import { Navbar, Nav, Container, Form } from 'react-bootstrap';
+import React from "react";
+import { Navbar, Nav, Container, Form } from "react-bootstrap";
 
 const MyNav = ({ setSearchQuery }) => (
-  <Navbar expand="lg" className="bg-body-tertiary mb-3" bg="dark" data-bs-theme="dark">
+  <Navbar
+    expand="lg"
+    className="bg-body-tertiary mb-3"
+    bg="dark"
+    data-bs-theme="dark"
+  >
     <Container fluid>
       <Navbar.Brand href="#">EpiBooks</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -13,7 +18,7 @@ const MyNav = ({ setSearchQuery }) => (
           <Nav.Link href="#">Browse</Nav.Link>
         </Nav>
         <Form.Control
-        className="w-50"
+          style={{ width: "20%" }}
           type="search"
           placeholder="Cerca un libro"
           onChange={(e) => setSearchQuery(e.target.value)}
