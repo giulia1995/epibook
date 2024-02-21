@@ -1,23 +1,30 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import MyNav from "./components/MyNav";
-import Myfooter from "./components/Myfooter";
-import Welcome from "./components/Welcome";
-import AllTheBooks from "./components/AllTheBooks";
-import { Container } from "react-bootstrap";
-import romance from "./data/romance.json";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
+import React, { useState, useEffect } from 'react';
+import MyNav from './components/MyNav'
+import MyFooter from './components/MyFooter'
+import Welcome from './components/Welcome'
+import { Container } from 'react-bootstrap'
+import BookList from './components/BookList'
+import booksData from '../src/data/romance.json'
 
-function App() {
+const App = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    setBooks(booksData);
+  }, []);
   return (
-    <div className="App">
-      <MyNav />
-      <Welcome />
+    <>
+      <MyNav setSearchQuery={setSearchQuery} />
       <Container>
-        <AllTheBooks books={romance} />
+        <Welcome />
+        <BookList books={books} searchQuery={searchQuery} />
       </Container>
-      <Myfooter />
-    </div>
-  );
+      <MyFooter />
+    </>
+  )
 }
 
-export default App;
+export default App
