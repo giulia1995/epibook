@@ -8,7 +8,7 @@ const SingleComment = ({ comment }) => {
         {
           method: 'DELETE',
           headers: {
-            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTcyZmVhNmZlMDMxZTAwMTliYTE0ZjUiLCJpYXQiOjE3MDc4NjQ5MzEsImV4cCI6MTcwOTA3NDUzMX0.hNdpCapjgSefC2_EBIe4ia_YyFhIvv45gsc1NRiaAc0",
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIwNDNmNGNlZjA0ODAwMTgxZGQ1Y2IiLCJpYXQiOjE3MDkxNTQzMjQsImV4cCI6MTcxMDM2MzkyNH0.waRKLVXB1cGW_CaVCOx2O1hQ6x7R7w7hkxLCcCue5YM",
           },
         }
       )
@@ -23,7 +23,7 @@ const SingleComment = ({ comment }) => {
   }
 
   return (
-    <ListGroup.Item data-testid="single-comment" className='d-flex justify-content-between'>
+    <ListGroup.Item data-testid="single-comment" className='d-flex justify-content-between text-start'>
       {comment.comment}<br/>valutazione:{comment.rate}
       <Button
         variant="danger"

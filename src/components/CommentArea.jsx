@@ -17,7 +17,7 @@ const CommentArea = ({ asin }) => {
           'https://striveschool-api.herokuapp.com/api/comments/' + asin,
           {
             headers: {
-              Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWQxZTIyMGU2YmFmYzAwMTk0Y2U1YTIiLCJpYXQiOjE3MDgyNTM3MjgsImV4cCI6MTcwOTQ2MzMyOH0.BGcELVQ4sBaNFHSRkgbhGrgiRNA0a2kED1cB6pfbXEA",
+              Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWIwNDNmNGNlZjA0ODAwMTgxZGQ1Y2IiLCJpYXQiOjE3MDkxNTQzMjQsImV4cCI6MTcxMDM2MzkyNH0.waRKLVXB1cGW_CaVCOx2O1hQ6x7R7w7hkxLCcCue5YM",
             },
           }
         )
@@ -44,7 +44,7 @@ const CommentArea = ({ asin }) => {
   }, [asin])
 
   return (
-    <div className="text-center">
+    <div className="text-center" >
       {isLoading && <Loading />}
       {isError && <Error />}
       <AddComment asin={asin} />

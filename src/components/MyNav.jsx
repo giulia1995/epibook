@@ -1,5 +1,8 @@
 import React from "react";
 import { Navbar, Nav, Container, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { LiaSwatchbookSolid } from "react-icons/lia";
+
 
 const MyNav = ({ setSearchQuery }) => (
   <Navbar
@@ -8,14 +11,16 @@ const MyNav = ({ setSearchQuery }) => (
     bg="dark"
     data-bs-theme="dark"
   >
-    <Container fluid>
-      <Navbar.Brand href="#">EpiBooks</Navbar.Brand>
+    <Container>
+      <Navbar.Brand className="fw-bold" href="#"><LiaSwatchbookSolid className="fs-2 mx-2" />EpiBooks</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="#">Home</Nav.Link>
-          <Nav.Link href="#">About</Nav.Link>
-          <Nav.Link href="#">Browse</Nav.Link>
+          <Link className="navbar-brand text-white" to="/">Home</Link>
+          <Link className="nav-link text-white" to="/">About</Link>
+          <Link className="nav-link text-white" to="/">Browse</Link>
+          
+      
         </Nav>
         <Form.Control
           style={{ width: "20%" }}
