@@ -6,7 +6,7 @@ const SingleBook = ({ setSelected, selected, book }) => {
 
   return (
     <>
-      <Card
+      <Card data-testid='book-card'
         onClick={() => setSelected(book.asin)}
         style={{
           border: selected === book.asin ? '3px solid red' : 'none',

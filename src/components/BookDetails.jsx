@@ -1,11 +1,11 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import CommentArea from "./CommentArea";
-import romance from "../data/romance.json";
+import fantasy from "../data/fantasy.json";
 
 const BookDetails = () => {
   const params = useParams();
-  const foundBook = romance.find((book) => book.asin === params.asin);
+  const foundBook = fantasy.find((book) => book.asin === params.asin);
 
   return (
     <Container>

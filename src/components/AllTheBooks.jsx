@@ -1,5 +1,5 @@
 import { Col, Row } from 'react-bootstrap'
-import romance from '../data/romance.json'
+import fantasy from '../data/fantasy.json'
 import SingleBook from './SingleBook'
 import CommentArea from './CommentArea'
 import { useState } from 'react'
@@ -11,7 +11,7 @@ const AllTheBooks = ({ searchQuery }) => {
     <Row>
       <Col md={8}>
         <Row className="g-2 mt-3">
-          {romance
+          {fantasy
             .filter((b) => b.title.toLowerCase().includes(searchQuery))
             .map((book) => {
               return (
